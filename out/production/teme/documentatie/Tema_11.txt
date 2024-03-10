@@ -1,0 +1,14 @@
+Classes and objects are basic concepts of Object Oriented Programming (OOP).
+
+A class is a group of objects that have a similar behaviour and similar properties. A class may contain the following:
+
+- methods 
+- constructors 
+- nested classes
+- interface 
+
+A property refers to a characteristic of an attribute of an object that corresponds to a class.
+
+A method is a function or a block of code that performs a specific task within the program. The methods are used for organizing the program logically, for sharing the tasks in smaller and manageable pieces and for improving the reutilisation of code.
+
+A constructor is a special type of method that is automatically called when an instance of class is created. It is the same name as the class and is used to initiliaze the newly created object.
