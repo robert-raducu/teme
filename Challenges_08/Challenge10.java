@@ -13,10 +13,11 @@ package Challenges_08;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Challenge10 {
 
-    public static void addNote(ArrayList<String> diary, String diaryPage){
+    public static void addNoteButton(ArrayList<String> diary, String diaryPage){
         String[] buffer = diaryPage.split(":");
         boolean alreadyExists = false;
         for (String page : diary) {
@@ -31,14 +32,44 @@ public class Challenge10 {
         }
     }
 
-    public static void main(String[] args) {
-        ArrayList<String> diary = new ArrayList<>();
+    public static void editNoteButton(ArrayList<String> diary, String date, String textEdit){
+        for(String page : diary){
+           String[] buffer = page.split(":");
+           if(buffer[0].equals(date)){
+               int index = diary.indexOf(page);
+               diary.set(index, date + ":" + textEdit);
+               break;
+           }
+        }
+    }
 
-        addNote(diary,"2008-11-28:Today I was sad");
-        addNote(diary,"2008-11-28:Mamma mia");
+    public static void deleteNoteButton(ArrayList<String> diary, String diaryDate){
+        for (String page : diary) {
+            String[] bufferDiary = page.split(":");
+            if (bufferDiary[0].equals(diaryDate)) {
+                diary.remove(page);
+                break;
+            }
+        }
+    }
+
+    public static void displayPagesButton(ArrayList<String> diary){
+        Collections.sort(diary, Collections.reverseOrder());
 
         for(String mesaj : diary){
             System.out.println(mesaj);
         }
+    }
+    public static void main(String[] args) {
+        ArrayList<String> diary = new ArrayList<>();
+
+        addNoteButton(diary,"2008-11-28:It's sunny outside!");
+        addNoteButton(diary,"2008-11-28:I am playing with my brother!");
+        editNoteButton(diary,"2008-11-28", "I am eating ice cream with my mother!");
+        addNoteButton(diary,"2009-12-12:My brother broke his leg!");
+        addNoteButton(diary,"2007-09-01:I visited Italy with my friends!");
+        deleteNoteButton(diary,"2009-12-12");
+
+        displayPagesButton(diary);
     }
 }
