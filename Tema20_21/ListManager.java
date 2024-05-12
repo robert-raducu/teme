@@ -1,7 +1,6 @@
-package Tema2021;
+package Tema20_21;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //-Create a class named ListManager. In this class, create a method named initializeList
 //which takes no parameters and returns an ArrayList of integers. The method should create

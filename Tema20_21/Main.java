@@ -1,7 +1,6 @@
-package Tema2021;
+package Tema20_21;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
