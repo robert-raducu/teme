@@ -1,0 +1,8 @@
+INSERT INTO Product(name, price, tva)
+VALUES ("Tricou", 82.00, 0.1); 
+
+INSERT INTO Product
+VALUES ("Laptop", 6500.50, 0.2); 
+
+INSERT INTO Product(name, price, tva)
+VALUES ("Husa de telefon", 90.00, 0.05); 
