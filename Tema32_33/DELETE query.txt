@@ -1,0 +1,1 @@
+DELETE FROM Product WHERE price = 90.00;
